@@ -53,7 +53,6 @@ var OF = document.getElementById('F');
 
 var ChoixClasse = "6";
 var TableauEleves = "Donnees/CM2vers6.json";
-//Bonjkour !!!
 
 var TabStructure = "Donnees/Structure.json";
 var TabOptionsClasses6 = [];
