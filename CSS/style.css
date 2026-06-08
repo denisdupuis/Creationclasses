@@ -1,0 +1,224 @@
+body {
+  display: flex;
+  background-color: #43497d;
+
+}
+
+#ContainerGauche {
+  background-color: #43497d;  
+  border-bottom: 2px solid black;
+  color:rgb(243, 244, 250);
+  /*width: 350px;*/
+}
+
+#ContainerDroite {
+  display: flex;
+  background-color: #43497d;
+  overflow-x: scroll;
+  width: 2200px;
+}
+
+
+i {
+  color: #f3f5f6;
+}
+
+
+#Menu {
+  border-style: none;
+}
+
+.MenuBas {
+  background-color: #43497d;  
+  position: fixed;
+  border-style:groove;
+  z-index: 1;
+  left: -350px;
+  transition: left 0.5s;
+  padding: 20px;
+}
+
+.MenuBas.active {
+  left: 0;
+}
+
+#MenuHaut i {
+  transition: color 0.5s;
+  font-size: 2rem;
+}
+
+
+#MenuBas i {
+  top:0;
+}
+
+
+#OuvrirMenu.Off {
+  display: none;
+}
+
+
+#FermerMenu.Off {
+  display: none;
+}
+
+#MenuHaut i:hover, .NumeroClasses i:hover {
+  color: crimson;
+  cursor: pointer;
+}
+
+#MenuHaut i:active {
+  transform: scale(0.9);
+}
+
+.Niveau, .LV2, .MenuOptions {
+  display: flex;
+  font-size: 1.5rem;
+  font: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.Options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.NumeroClasses {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.NumeroClasses i {
+  padding: 12px;
+  font-size: 1.5rem;
+  background-color: rgb(27, 73, 221);
+  border-radius: 50%;
+}
+
+#ESP, #ITA, #ALL, #Danse, #Voile, #LCE, #Latin, #HIST, #F, #G {
+  transform: scale(1.5); 
+}
+
+.Langues {
+  display: flex;
+  justify-content: space-around;
+}
+
+#PDF, #ESP, #ITA, #ALL, #Danse, #Voile, #LCE, #Latin, #HIST, #G, #F {
+  cursor: pointer;
+}
+
+#PDF:hover, #ESP:hover, #ITA:hover, #ALL:hover, #Danse:hover, #Voile:hover, #LCE:hover, #Latin:hover, #HIST:hover, #G:hover, #F:hover {
+  border: solid #f30606;
+}
+
+
+#ESP.selected, #ITA.selected, #ALL.selected, #Danse.selected, #Voile.selected, #LCE.selected, #Latin.selected, #HIST.selected, #G.selected, #F.selected {
+  border: solid #f30606;
+}
+
+
+.Danger {
+  scale: 80%;
+  transition: scale 0.3s;
+}
+
+.Danger:hover {
+  scale: 100%;
+  cursor: pointer;
+}
+
+
+.Alert {
+  display : none;
+}
+
+
+.Etiquette:hover {
+   scale: 103%;
+}
+
+
+#Classes {
+  column-gap: 10px;
+  padding: 20px;
+  display:flex;
+  background-color: #43497d;
+  /*width: 100%;*/
+}
+
+#Classe1, #Classe2, #Classe3, #Classe4 {
+  column-gap: 10px;
+  background-color: #ffffff;
+  box-shadow: 3px 3px 5px black;
+  border-radius: 20px;
+  width: 400px;
+}
+
+
+#InfoClasse1, #InfoClasse2, #InfoClasse3 , #InfoClasse4 {
+  background-color: #43497d;
+  color:#f3f5f6;
+  display:grid;
+  grid-template-columns: 30% 10% 10% 10% 10% 30%;
+}
+
+
+#NumClasse1, #ImageG1, #ImageF1, #NBGars1, #NBFilles1, #NBEleves1, #NumClasse2, #ImageG2, #ImageF2, #NBGars2, #NBFilles2,
+#NBEleves2, #NumClasse3, #ImageG3, #ImageF3, #NBGars3, #NBFilles3, #NBEleves3,
+#NumClasse4, #ImageG4, #ImageF4, #NBGars4, #NBFilles4, #NBEleves4 {
+  background-color: #43497d;
+  color:#f3f5f6;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 6vh; 
+}
+
+#NumClasse1, #NumClasse2, #NumClasse3, #NumClasse4  {
+  font-size: 1.5em;
+  line-height: 4vh;
+  transition: color 0.5s;
+}
+
+
+#ClasseOptions1, #ClasseOptions2, #ClasseOptions3, #ClasseOptions4 {
+  position: relative;
+  text-align: center;
+  cursor: help;
+}
+
+#ClasseOptions1:hover:after,
+#ClasseOptions1:focus::after,
+#ClasseOptions2:hover:after,
+#ClasseOptions2:focus::after,
+#ClasseOptions3:hover:after,
+#ClasseOptions3:focus::after,
+#ClasseOptions4:hover:after,
+#ClasseOptions4:focus::after
+{
+  content: attr(aria-label);
+  position: absolute;
+  top: 1.5em;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  padding: 5px 14px;
+  background:#43497d;
+  border-radius: 4px;
+}
+
+#BlocClasse1, #BlocClasse2, #BlocClasse3, #BlocClasse4 {
+  height: 90vh;
+  border-radius: 20px;
+  overflow-y: scroll;
+}
+
+
+#BlocListeEleves {
+  background-color: #43497d;
+  width: 350px;
+  height: 98vh;
+  resize:horizontal;
+  overflow-y: scroll;
+}

@@ -1,0 +1,513 @@
+[
+  {
+    "NOM": "AVENEL",
+    "PRENOM": "Dorine",
+    "SEXE": "F",
+    "LV2": "ESP",
+    "OPTION": "VOILE"
+  },
+  {
+    "NOM": "BATTULGA",
+    "PRENOM": "Michele",
+    "SEXE": "F",
+    "LV2": "ITALIEN",
+    "OPTION": ""
+  },
+  {
+    "NOM": "BIKOUMOU",
+    "PRENOM": "Maylyss",
+    "SEXE": "F",
+    "LV2": "ESP",
+    "OPTION": ""
+  },
+  {
+    "NOM": "BOITTOUT",
+    "PRENOM": "Leelou",
+    "SEXE": "F",
+    "LV2": "ESP",
+    "OPTION": ""
+  },
+  {
+    "NOM": "BUQUET",
+    "PRENOM": "Clara",
+    "SEXE": "F",
+    "LV2": "ITALIEN",
+    "OPTION": "VOILE"
+  },
+  {
+    "NOM": "CAKIR",
+    "PRENOM": "Belinay",
+    "SEXE": "F",
+    "LV2": "ESP",
+    "OPTION": "DANSE"
+  },
+  {
+    "NOM": "CANHAN",
+    "PRENOM": "Marine",
+    "SEXE": "F",
+    "LV2": "ITALIEN",
+    "OPTION": ""
+  },
+  {
+    "NOM": "CHESMAIN",
+    "PRENOM": "Keylan",
+    "SEXE": "M",
+    "LV2": "ESP",
+    "OPTION": ""
+  },
+  {
+    "NOM": "DANLOS",
+    "PRENOM": "Raphael",
+    "SEXE": "M",
+    "LV2": "ESP",
+    "OPTION": ""
+  },
+  {
+    "NOM": "DEVILLERS",
+    "PRENOM": "Diego",
+    "SEXE": "M",
+    "LV2": "ESP",
+    "OPTION": "VOILE"
+  },
+  {
+    "NOM": "GASTEBOIS-REYNES",
+    "PRENOM": "Shaina",
+    "SEXE": "F",
+    "LV2": "ESP",
+    "OPTION": ""
+  },
+  {
+    "NOM": "GUIBERT",
+    "PRENOM": "Soan",
+    "SEXE": "M",
+    "LV2": "ESP",
+    "OPTION": "VOILE"
+  },
+  {
+    "NOM": "GULTEKIN",
+    "PRENOM": "Melda",
+    "SEXE": "F",
+    "LV2": "ESP",
+    "OPTION": ""
+  },
+  {
+    "NOM": "HENOS",
+    "PRENOM": "Lola",
+    "SEXE": "F",
+    "LV2": "ESP",
+    "OPTION": "DANSE"
+  },
+  {
+    "NOM": "LAMPIN",
+    "PRENOM": "Jade",
+    "SEXE": "F",
+    "LV2": "ESP",
+    "OPTION": "DANSE"
+  },
+  {
+    "NOM": "LANGLOIS",
+    "PRENOM": "Lucas",
+    "SEXE": "M",
+    "LV2": "ESP",
+    "OPTION": "VOILE"
+  },
+  {
+    "NOM": "MASYN",
+    "PRENOM": "Jules",
+    "SEXE": "M",
+    "LV2": "ESP",
+    "OPTION": "VOILE"
+  },
+  {
+    "NOM": "NAZE",
+    "PRENOM": "Xavier",
+    "SEXE": "M",
+    "LV2": "ESP",
+    "OPTION": ""
+  },
+  {
+    "NOM": "OBE",
+    "PRENOM": "Cyrielle",
+    "SEXE": "F",
+    "LV2": "ITALIEN",
+    "OPTION": ""
+  },
+  {
+    "NOM": "POULAIN",
+    "PRENOM": "Ylan",
+    "SEXE": "M",
+    "LV2": "ESP",
+    "OPTION": "VOILE"
+  },
+  {
+    "NOM": "RADE",
+    "PRENOM": "Leana",
+    "SEXE": "F",
+    "LV2": "ITALIEN",
+    "OPTION": ""
+  },
+  {
+    "NOM": "TUGSBAATAR",
+    "PRENOM": "Oyunbolor",
+    "SEXE": "F",
+    "LV2": "ITALIEN",
+    "OPTION": ""
+  },
+  {
+    "NOM": "ULRIKSON",
+    "PRENOM": "Axelle",
+    "SEXE": "F",
+    "LV2": "ESP",
+    "OPTION": "DANSE"
+  },
+  {
+    "NOM": "ANTIL",
+    "PRENOM": "Matheo",
+    "SEXE": "M",
+    "LV2": "ESP",
+    "OPTION": ""
+  },
+  {
+    "NOM": "BEDET",
+    "PRENOM": "Yvana",
+    "SEXE": "F",
+    "LV2": "ITALIEN",
+    "OPTION": ""
+  },
+  {
+    "NOM": "BEKHADA",
+    "PRENOM": "Lilya",
+    "SEXE": "F",
+    "LV2": "ITALIEN",
+    "OPTION": ""
+  },
+  {
+    "NOM": "BLOQUET",
+    "PRENOM": "Costa",
+    "SEXE": "M",
+    "LV2": "ITALIEN",
+    "OPTION": "LATIN"
+  },
+  {
+    "NOM": "BORLET",
+    "PRENOM": "Lyana",
+    "SEXE": "F",
+    "LV2": "ESP",
+    "OPTION": ""
+  },
+  {
+    "NOM": "CARON",
+    "PRENOM": "Andgelina",
+    "SEXE": "F",
+    "LV2": "ITALIEN",
+    "OPTION": ""
+  },
+  {
+    "NOM": "ELBAHI",
+    "PRENOM": "Ilian",
+    "SEXE": "M",
+    "LV2": "ESP",
+    "OPTION": ""
+  },
+  {
+    "NOM": "FOLATRE",
+    "PRENOM": "Loula",
+    "SEXE": "F",
+    "LV2": "ESP",
+    "OPTION": ""
+  },
+  {
+    "NOM": "FRANCOIS",
+    "PRENOM": "Noah",
+    "SEXE": "M",
+    "LV2": "ESP",
+    "OPTION": "VOILE"
+  },
+  {
+    "NOM": "GUILLAIN",
+    "PRENOM": "Maya",
+    "SEXE": "F",
+    "LV2": "ITALIEN",
+    "OPTION": ""
+  },
+  {
+    "NOM": "KARADENIZ",
+    "PRENOM": "Zeynep",
+    "SEXE": "F",
+    "LV2": "ESP",
+    "OPTION": ""
+  },
+  {
+    "NOM": "LEGAY",
+    "PRENOM": "Kamrone",
+    "SEXE": "M",
+    "LV2": "ITALIEN",
+    "OPTION": ""
+  },
+  {
+    "NOM": "MELECK",
+    "PRENOM": "Thayni",
+    "SEXE": "F",
+    "LV2": "ESP",
+    "OPTION": ""
+  },
+  {
+    "NOM": "MERZOUK",
+    "PRENOM": "Yahnis",
+    "SEXE": "M",
+    "LV2": "ESP",
+    "OPTION": ""
+  },
+  {
+    "NOM": "MOUCHARD",
+    "PRENOM": "Lorine",
+    "SEXE": "F",
+    "LV2": "ESP",
+    "OPTION": ""
+  },
+  {
+    "NOM": "OLGUN",
+    "PRENOM": "Yasin-Tayyip",
+    "SEXE": "M",
+    "LV2": "ESP",
+    "OPTION": ""
+  },
+  {
+    "NOM": "OULED NASR",
+    "PRENOM": "Solan",
+    "SEXE": "M",
+    "LV2": "ESP",
+    "OPTION": ""
+  },
+  {
+    "NOM": "PARIZOT",
+    "PRENOM": "Warren",
+    "SEXE": "M",
+    "LV2": "ESP",
+    "OPTION": "VOILE"
+  },
+  {
+    "NOM": "ROSSE",
+    "PRENOM": "Taina",
+    "SEXE": "F",
+    "LV2": "ESP",
+    "OPTION": ""
+  },
+  {
+    "NOM": "VISKHAEVA",
+    "PRENOM": "Maryam",
+    "SEXE": "F",
+    "LV2": "ITALIEN",
+    "OPTION": ""
+  },
+  {
+    "NOM": "YELMANI",
+    "PRENOM": "Manise",
+    "SEXE": "M",
+    "LV2": "ESP",
+    "OPTION": ""
+  },
+  {
+    "NOM": "ZEDDE",
+    "PRENOM": "Louis",
+    "SEXE": "M",
+    "LV2": "ESP",
+    "OPTION": ""
+  },
+  {
+    "NOM": "AHMED BEN ALI",
+    "PRENOM": "Naomy",
+    "SEXE": "F",
+    "LV2": "ITALIEN",
+    "OPTION": "VOILE"
+  },
+  {
+    "NOM": "BILLOQUET",
+    "PRENOM": "Lylou",
+    "SEXE": "F",
+    "LV2": "ESP",
+    "OPTION": "VOILE"
+  },
+  {
+    "NOM": "BIRGUL",
+    "PRENOM": "Azra",
+    "SEXE": "F",
+    "LV2": "ESP",
+    "OPTION": ""
+  },
+  {
+    "NOM": "BRIET",
+    "PRENOM": "Mae",
+    "SEXE": "M",
+    "LV2": "ESP",
+    "OPTION": "VOILE"
+  },
+  {
+    "NOM": "COUTURIER",
+    "PRENOM": "Ines",
+    "SEXE": "F",
+    "LV2": "ESP",
+    "OPTION": "VOILE"
+  },
+  {
+    "NOM": "DEBESSE",
+    "PRENOM": "Louise-Anne",
+    "SEXE": "F",
+    "LV2": "ALLEMAND",
+    "OPTION": ""
+  },
+  {
+    "NOM": "DEHAYS",
+    "PRENOM": "Rebecca",
+    "SEXE": "F",
+    "LV2": "ESP",
+    "OPTION": "VOILE"
+  },
+  {
+    "NOM": "DELAMARE",
+    "PRENOM": "Lizy",
+    "SEXE": "F",
+    "LV2": "ESP",
+    "OPTION": ""
+  },
+  {
+    "NOM": "DENOUETTE",
+    "PRENOM": "Erwan",
+    "SEXE": "M",
+    "LV2": "ESP",
+    "OPTION": ""
+  },
+  {
+    "NOM": "DUPUIS",
+    "PRENOM": "Leo",
+    "SEXE": "M",
+    "LV2": "ESP",
+    "OPTION": ""
+  },
+  {
+    "NOM": "GOULEY",
+    "PRENOM": "Stanalia",
+    "SEXE": "F",
+    "LV2": "ESP",
+    "OPTION": ""
+  },
+  {
+    "NOM": "GUIBERT",
+    "PRENOM": "Kyllian",
+    "SEXE": "M",
+    "LV2": "ITALIEN",
+    "OPTION": ""
+  },
+  {
+    "NOM": "KABEYA",
+    "PRENOM": "Merley",
+    "SEXE": "F",
+    "LV2": "ESP",
+    "OPTION": ""
+  },
+  {
+    "NOM": "KALA",
+    "PRENOM": "Marina",
+    "SEXE": "F",
+    "LV2": "ITALIEN",
+    "OPTION": ""
+  },
+  {
+    "NOM": "KLEJNOT",
+    "PRENOM": "Matheo",
+    "SEXE": "M",
+    "LV2": "ESP",
+    "OPTION": ""
+  },
+  {
+    "NOM": "OGUNTOYINBO",
+    "PRENOM": "Pamilerin",
+    "SEXE": "M",
+    "LV2": "ALLEMAND",
+    "OPTION": ""
+  },
+  {
+    "NOM": "ROBERT",
+    "PRENOM": "Chaiyma",
+    "SEXE": "F",
+    "LV2": "ESP",
+    "OPTION": ""
+  },
+  {
+    "NOM": "SARGERET",
+    "PRENOM": "Loris",
+    "SEXE": "M",
+    "LV2": "ESP",
+    "OPTION": ""
+  },
+  {
+    "NOM": "SERTOGLU",
+    "PRENOM": "Serkan",
+    "SEXE": "M",
+    "LV2": "ESP",
+    "OPTION": ""
+  },
+  {
+    "NOM": "SOMONT",
+    "PRENOM": "Mathys",
+    "SEXE": "M",
+    "LV2": "ESP",
+    "OPTION": ""
+  },
+  {
+    "NOM": "SURET",
+    "PRENOM": "Chloe",
+    "SEXE": "F",
+    "LV2": "ESP",
+    "OPTION": ""
+  },
+  {
+    "NOM": "TAUFER",
+    "PRENOM": "Ilan",
+    "SEXE": "M",
+    "LV2": "",
+    "OPTION": ""
+  },
+  {
+    "NOM": "TOUSSAINT",
+    "PRENOM": "Laoni",
+    "SEXE": "F",
+    "LV2": "ESP",
+    "OPTION": ""
+  },
+  {
+    "NOM": "MARTIN",
+    "PRENOM": "Mickael",
+    "SEXE": "M",
+    "LV2": "ITALIEN",
+    "OPTION": ""
+  },
+  {
+    "NOM": "COULON",
+    "PRENOM": "Clara",
+    "SEXE": "F",
+    "LV2": "",
+    "OPTION": ""
+  },
+  {
+    "NOM": "SERGENT",
+    "PRENOM": "Dorian",
+    "SEXE": "M",
+    "LV2": "",
+    "OPTION": ""
+  },
+  {
+    "NOM": "SENTURK",
+    "PRENOM": "Salim",
+    "SEXE": "M",
+    "LV2": "",
+    "OPTION": ""
+  },
+  {
+    "NOM": "HECKMANN",
+    "PRENOM": "Timmy",
+    "SEXE": "M",
+    "LV2": "",
+    "OPTION": ""
+  }
+]

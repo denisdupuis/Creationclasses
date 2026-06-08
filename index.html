@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Application de création de classes">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="CSS/style.css">
+        <title>Constitution des classes</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+        
+    <body>
+
+      <div id="ContainerGauche">
+         <div id="Menu">
+            <div id="MenuHaut">
+              <i href="#" id="OuvrirMenu" class="fa-solid fa-bars ouvrir"></i>
+              <i href="#" id="FermerMenu" class="fa-solid fa-xmark fermer"></i>
+            </div>
+            <div id="MenuBas" class="MenuBas">
+              <i class="Niveau">NIVEAU :</i>
+              <div class="NumeroClasses">
+                <i href="#" id="B6" value="6" onclick="ChangerChoix('6')">6ème</i>
+                <i href="#" id="B5" value="5" onclick="ChangerChoix('5')">5ème</i>
+                <i href="#" id="B4" value="4" onclick="ChangerChoix('4')">4ème</i>
+                <i href="#" id="B3" value="3" onclick="ChangerChoix('3')">3ème</i>
+              </div>
+              <div class="Sexe">
+                <img href="#" id="G" value="G" src="Images/G.png" onclick="TrierOptions('G')"/>
+                <img href="#" id="F" value="F" src="Images/F.png" onclick="TrierOptions('F')"/>
+              </div>
+              <div class="OptionsClasses">
+                <i class="LV2">LV2 :</i>
+                <div class="Langues">
+                  <img href="#" id="ESP" value="ESP" src="Images/Espagnol.png" onclick="TrierOptions('ESP')"/>
+                  <img href="#" id="ITA" value="ITA" src="Images/Italie.png" onclick="TrierOptions('ITA')"/>
+                  <img href="#" id="ALL" value="ALL" src="Images/Allemand.jpg" onclick="TrierOptions('ALL')"/>
+                </div>
+                <i class="MenuOptions">OPTIONS :</i>
+                <div class="Options">
+                  <img href="#" id="Danse" value="Danse" src="Images/Danse.png" onclick="TrierOptions('Danse')"/>
+                  <img href="#" id="Voile" value="Voile" src="Images/Voile.png" onclick="TrierOptions('Voile')"/>
+                  <img href="#" id="LCE" value="LCE" src="Images/LCE.png" onclick="TrierOptions('LCE')"/>
+                  <img href="#" id="Latin" value="Latin" src="Images/Lat.png" onclick="TrierOptions('Latin')"/>
+                  <img href="#" id="HIST" value="HIST" src="Images/HistoireArts.png" onclick="TrierOptions('HIST')"/>
+                </div>
+                <img href="#" src="Images/PDF.png" id="PDF" onclick="PrintPDF()">
+              </div>
+            </div>
+         </div>
+         <div id="BlocListeEleves"></div>
+      </div>
+
+      <div id="ContainerDroite">
+        <div id="Classes">
+          <div id="Classe1">
+            <div id="InfoClasse1">
+              <div id="GroupeClasse1">
+                <div id="NumClasse1">6ème 2</div>
+                <div id="ClasseOptions1"></div>
+              </div>  
+              <div id="ImageG1">
+                <img src="Images/IconeHomme.png">
+              </div>
+              <div id="NBGars1"> : 0</div>
+              <div id="ImageF1">
+                <img src="Images/IconeFemme.png">
+              </div>
+              <div id="NBFilles1"> : 0</div>
+              <div id="NBEleves1">(0)</div>
+            </div>
+            <div id="BlocClasse1"></div>
+          </div>
+           <div id="Classe2">
+            <div id="InfoClasse2">
+              <div id="GroupeClasse2">
+                <div id="NumClasse2">6ème 3</div>
+                <div id="ClasseOptions2"></div>
+              </div>  
+              <div id="ImageG2">
+                <img src="Images/IconeHomme.png">
+              </div>
+              <div id="NBGars2"> : 0</div>
+              <div id="ImageF2">
+                <img src="Images/IconeFemme.png">
+              </div>
+              <div id="NBFilles2"> : 0</div>
+              <div id="NBEleves2">(0)</div>
+            </div>
+            <div id="BlocClasse2"></div>
+           </div>
+           <div id="Classe3">
+            <div id="InfoClasse3">
+              <div id="GroupeClasse3">
+                <div id="NumClasse3">6ème 4</div>
+                <div id="ClasseOptions3"></div>
+              </div>  
+              <div id="ImageG3">
+                <img src="Images/IconeHomme.png">
+              </div>
+              <div id="NBGars3"> : 0</div>
+              <div id="ImageF3">
+                <img src="Images/IconeFemme.png">
+              </div>
+              <div id="NBFilles3"> : 0</div>
+              <div id="NBEleves3">(0)</div>
+            </div>
+            <div id="BlocClasse3"></div>
+           </div>
+           <div id="Classe4">
+            <div id="InfoClasse4">
+              <div id="GroupeClasse4">
+                <div id="NumClasse4">6ème 5</div>
+                <div id="ClasseOptions4"></div>
+              </div>  
+              <div id="ImageG4">
+                <img src="Images/IconeHomme.png">
+              </div>
+              <div id="NBGars4"> : 0</div>
+              <div id="ImageF4">
+                <img src="Images/IconeFemme.png">
+              </div>
+              <div id="NBFilles4"> : 0</div>
+              <div id="NBEleves4">(0)</div>
+            </div>
+            <div id="BlocClasse4"></div>
+           </div>
+        </div>
+      </div>
+      <script src="JS/jspdf.min.js"></script>
+      <script defer src="JS/Code.js"> </script>     
+    </body>
+</html>

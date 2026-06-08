@@ -1,0 +1,74 @@
+[
+  {
+    "NIVEAU": 6,
+    "CLASSE": 2,
+    "OPTIONS": "D",
+    "LABEL": "Danse"
+  },
+  {
+    "NIVEAU": 6,
+    "CLASSE": 3,
+    "OPTIONS": "",
+    "LABEL": ""
+  },
+  {
+    "NIVEAU": 6,
+    "CLASSE": 4,
+    "OPTIONS": "",
+    "LABEL": ""
+  },
+  {
+    "NIVEAU": 5,
+    "CLASSE": 2,
+    "OPTIONS": "Esp",
+    "LABEL": "Espagnol"
+  },
+  {
+    "NIVEAU": 5,
+    "CLASSE": 3,
+    "OPTIONS": "Esp-It-D",
+    "LABEL": "Espagnol Italien Danse"
+  },
+  {
+    "NIVEAU": 5,
+    "CLASSE": 4,
+    "OPTIONS": "Esp-It-All-V-L",
+    "LABEL": "Espagnol Italien Allemand Voile Latin"
+  },
+  {
+    "NIVEAU": 4,
+    "CLASSE": 2,
+    "OPTIONS": "Esp-D",
+    "LABEL": "Espagnol Danse"
+  },
+  {
+    "NIVEAU": 4,
+    "CLASSE": 3,
+    "OPTIONS": "Esp-It-All",
+    "LABEL": "Espagnol Italien Allemand"
+  },
+  {
+    "NIVEAU": 4,
+    "CLASSE": 4,
+    "OPTIONS": "Esp-It-L-V-H",
+    "LABEL": "Espagnol Italien Latin Voile Arts "
+  },
+  {
+    "NIVEAU": 3,
+    "CLASSE": 2,
+    "OPTIONS": "Esp",
+    "LABEL": "Espagnol"
+  },
+  {
+    "NIVEAU": 3,
+    "CLASSE": 3,
+    "OPTIONS": "Esp-All-V",
+    "LABEL": "Espagnol Allemand Voile"
+  },
+  {
+    "NIVEAU": 3,
+    "CLASSE": 4,
+    "OPTIONS": "E-Al-It-L-D-H",
+    "LABEL": "Espagnol Allemand Italien Latin Danse Arts"
+  }
+]

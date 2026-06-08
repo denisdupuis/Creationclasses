@@ -1,0 +1,200 @@
+/* ================================================
+   STYLES POUR LE DRAG & DROP AMÉLIORÉ
+   ================================================ */
+
+/* Élément en cours de déplacement */
+.ElevesList.dragging {
+    opacity: 0.5;
+    cursor: move;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Zone de dépôt survolée */
+.drag-over {
+    background-color: rgba(100, 149, 237, 0.1);
+    border: 2px dashed #6495ED;
+    transition: all 0.3s ease;
+}
+
+/* Indicateur d'insertion avant un élément */
+.insert-before {
+    border-top: 3px solid #4CAF50;
+    margin-top: 5px;
+    transition: border-color 0.2s ease;
+}
+
+/* Indicateur d'insertion après un élément */
+.insert-after {
+    border-bottom: 3px solid #4CAF50;
+    margin-bottom: 5px;
+    transition: border-color 0.2s ease;
+}
+
+/* Style de base pour les élèves - amélioration de l'apparence */
+.ElevesList {
+    cursor: grab;
+    user-select: none;
+    transition: all 0.2s ease;
+    padding: 8px;
+    margin: 4px 0;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.ElevesList:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transform: translateX(3px);
+}
+
+.ElevesList:active {
+    cursor: grabbing;
+}
+
+/* Animation pour les conteneurs de classes */
+#BlocClasse1, #BlocClasse2, #BlocClasse3, #BlocClasse4 {
+    min-height: 100px;
+    transition: background-color 0.3s ease;
+    padding: 10px;
+}
+
+/* Style pour la liste principale */
+#BlocListeEleves {
+    min-height: 200px;
+    transition: background-color 0.3s ease;
+}
+
+/* Effet de pulsation pour attirer l'attention sur les zones de dépôt vides */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(100, 149, 237, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(100, 149, 237, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(100, 149, 237, 0);
+    }
+}
+
+.drag-over:empty {
+    animation: pulse 1.5s infinite;
+}
+
+/* Style pour les images dans les cartes d'élèves */
+.ElevesList img {
+    transition: transform 0.2s ease;
+}
+
+.ElevesList:hover img {
+    transform: scale(1.1);
+}
+
+/* Amélioration du feedback visuel lors du survol */
+.ElevesList.dragging ~ .ElevesList {
+    margin-top: 10px;
+    transition: margin-top 0.3s ease;
+}
+
+/* Style pour les alertes danger */
+.Danger {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.Danger:hover {
+    transform: scale(1.2) rotate(10deg);
+}
+
+.Alert {
+    transition: all 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.Alert.On {
+    max-height: 200px;
+    opacity: 1;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #fff3cd;
+    border: 1px solid #ffc107;
+    border-radius: 4px;
+}
+
+/* Styles pour indiquer qu'un élément est draggable */
+[draggable="true"] {
+    position: relative;
+}
+
+[draggable="true"]::before {
+    content: "⋮⋮";
+    position: absolute;
+    left: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    color: #999;
+    font-size: 18px;
+    transition: opacity 0.2s ease;
+}
+
+[draggable="true"]:hover::before {
+    opacity: 1;
+}
+
+/* Responsive : ajustements pour petits écrans */
+@media (max-width: 768px) {
+    .ElevesList {
+        font-size: 14px;
+        padding: 6px;
+    }
+    
+    .insert-before,
+    .insert-after {
+        border-width: 2px;
+    }
+}
+
+/* Animation d'apparition pour les nouveaux élèves */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ElevesList {
+    animation: slideIn 0.3s ease;
+}
+
+/* Style pour les zones de classe vides */
+#BlocClasse1:empty::after,
+#BlocClasse2:empty::after,
+#BlocClasse3:empty::after,
+#BlocClasse4:empty::after {
+    content: "Glissez des élèves ici";
+    display: block;
+    text-align: center;
+    color: #999;
+    padding: 40px;
+    font-style: italic;
+    opacity: 0.5;
+}
+
+#BlocClasse1:empty,
+#BlocClasse2:empty,
+#BlocClasse3:empty,
+#BlocClasse4:empty {
+    border: 2px dashed #ccc;
+    background-color: #fafafa;
+    border-radius: 8px;
+}

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo - Drag & Drop Amélioré</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .instructions {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .instructions h2 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .instructions ul {
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+
+        .demo-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+        }
+
+        .source-list {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .source-list h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .classes-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .class-box {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            min-height: 300px;
+        }
+
+        .class-box h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+
+        .student-item {
+            background: #f8f9fa;
+            padding: 12px;
+            margin: 8px 0;
+            border-radius: 6px;
+            border: 1px solid #dee2e6;
+            cursor: grab;
+            user-select: none;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .student-item:hover {
+            background: #e9ecef;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transform: translateX(3px);
+        }
+
+        .student-item:active {
+            cursor: grabbing;
+        }
+
+        .student-item.dragging {
+            opacity: 0.5;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .student-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+        }
+
+        .icon-boy {
+            background: #4A90E2;
+        }
+
+        .icon-girl {
+            background: #E91E63;
+        }
+
+        .drag-over {
+            background-color: rgba(100, 149, 237, 0.1);
+            border: 2px dashed #6495ED;
+        }
+
+        .insert-before {
+            border-top: 3px solid #4CAF50;
+            margin-top: 5px;
+        }
+
+        .insert-after {
+            border-bottom: 3px solid #4CAF50;
+            margin-bottom: 5px;
+        }
+
+        .drop-zone:empty::after {
+            content: "Glissez des élèves ici";
+            display: block;
+            text-align: center;
+            color: #999;
+            padding: 40px;
+            font-style: italic;
+            opacity: 0.5;
+        }
+
+        .drop-zone:empty {
+            border: 2px dashed #ccc;
+            background-color: #fafafa;
+            border-radius: 8px;
+            min-height: 100px;
+        }
+
+        .stats {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            color: #333;
+            font-size: 0.9em;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(100, 149, 237, 0.4);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(100, 149, 237, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(100, 149, 237, 0);
+            }
+        }
+
+        .drag-over:empty {
+            animation: pulse 1.5s infinite;
+        }
+
+        @media (max-width: 1200px) {
+            .classes-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .demo-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎓 Démo - Drag & Drop Amélioré</h1>
+
+        <div class="instructions">
+            <h2>📖 Instructions</h2>
+            <ul>
+                <li><strong>Déplacer un élève :</strong> Cliquez et glissez un élève vers une classe</li>
+                <li><strong>Position précise :</strong> Une ligne verte indique où l'élève sera inséré</li>
+                <li><strong>Réorganiser :</strong> Glissez un élève au-dessus ou en-dessous d'un autre dans la même classe</li>
+                <li><strong>Clic droit :</strong> Retourne l'élève à la liste principale</li>
+            </ul>
+        </div>
+
+        <div class="demo-container">
+            <div class="source-list">
+                <h3>📋 Liste des Élèves</h3>
+                <div id="source" class="drop-zone"></div>
+                <div class="stats" id="source-stats">Total: 0 élèves</div>
+            </div>
+
+            <div class="classes-container">
+                <div class="class-box">
+                    <h3>📚 Classe 6ème A</h3>
+                    <div id="class1" class="drop-zone"></div>
+                    <div class="stats" id="class1-stats">
+                        👦 Garçons: 0 | 👧 Filles: 0 | Total: 0
+                    </div>
+                </div>
+
+                <div class="class-box">
+                    <h3>📚 Classe 6ème B</h3>
+                    <div id="class2" class="drop-zone"></div>
+                    <div class="stats" id="class2-stats">
+                        👦 Garçons: 0 | 👧 Filles: 0 | Total: 0
+                    </div>
+                </div>
+
+                <div class="class-box">
+                    <h3>📚 Classe 6ème C</h3>
+                    <div id="class3" class="drop-zone"></div>
+                    <div class="stats" id="class3-stats">
+                        👦 Garçons: 0 | 👧 Filles: 0 | Total: 0
+                    </div>
+                </div>
+
+                <div class="class-box">
+                    <h3>📚 Classe 6ème D</h3>
+                    <div id="class4" class="drop-zone"></div>
+                    <div class="stats" id="class4-stats">
+                        👦 Garçons: 0 | 👧 Filles: 0 | Total: 0
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Données de démonstration
+        const students = [
+            { id: 1, nom: "Martin", prenom: "Alice", sexe: "F" },
+            { id: 2, nom: "Bernard", prenom: "Lucas", sexe: "M" },
+            { id: 3, nom: "Dubois", prenom: "Emma", sexe: "F" },
+            { id: 4, nom: "Thomas", prenom: "Hugo", sexe: "M" },
+            { id: 5, nom: "Robert", prenom: "Léa", sexe: "F" },
+            { id: 6, nom: "Petit", prenom: "Louis", sexe: "M" },
+            { id: 7, nom: "Durand", prenom: "Chloé", sexe: "F" },
+            { id: 8, nom: "Leroy", prenom: "Nathan", sexe: "M" },
+            { id: 9, nom: "Moreau", prenom: "Manon", sexe: "F" },
+            { id: 10, nom: "Simon", prenom: "Tom", sexe: "M" },
+            { id: 11, nom: "Laurent", prenom: "Sarah", sexe: "F" },
+            { id: 12, nom: "Lefebvre", prenom: "Arthur", sexe: "M" },
+            { id: 13, nom: "Michel", prenom: "Inès", sexe: "F" },
+            { id: 14, nom: "Garcia", prenom: "Théo", sexe: "M" },
+            { id: 15, nom: "David", prenom: "Camille", sexe: "F" }
+        ];
+
+        let elementEnCoursDeDeplacement = null;
+        let positionInsertion = null;
+
+        // Créer les éléments élèves
+        function createStudentElement(student) {
+            const div = document.createElement('div');
+            div.className = 'student-item';
+            div.draggable = true;
+            div.id = `student-${student.id}`;
+            div.dataset.sexe = student.sexe;
+
+            const icon = document.createElement('div');
+            icon.className = `student-icon ${student.sexe === 'M' ? 'icon-boy' : 'icon-girl'}`;
+            icon.textContent = student.sexe === 'M' ? '👦' : '👧';
+
+            const name = document.createElement('span');
+            name.textContent = `${student.nom} ${student.prenom}`;
+
+            div.appendChild(icon);
+            div.appendChild(name);
+
+            // Event listeners
+            div.addEventListener('dragstart', handleDragStart);
+            div.addEventListener('dragend', handleDragEnd);
+            div.addEventListener('contextmenu', handleRightClick);
+
+            return div;
+        }
+
+        // Initialiser la liste source
+        function initializeSource() {
+            const source = document.getElementById('source');
+            students.forEach(student => {
+                source.appendChild(createStudentElement(student));
+            });
+            updateStats('source');
+        }
+
+        // Gestion du début du drag
+        function handleDragStart(e) {
+            elementEnCoursDeDeplacement = e.target;
+            e.target.classList.add('dragging');
+            e.dataTransfer.effectAllowed = 'move';
+            e.dataTransfer.setData('text/html', e.target.innerHTML);
+        }
+
+        // Gestion de la fin du drag
+        function handleDragEnd(e) {
+            e.target.classList.remove('dragging');
+            elementEnCoursDeDeplacement = null;
+            
+            // Nettoyer les indicateurs
+            document.querySelectorAll('.insert-before, .insert-after, .drag-over').forEach(el => {
+                el.classList.remove('insert-before', 'insert-after', 'drag-over');
+            });
+        }
+
+        // Gestion du survol
+        function handleDragOver(e) {
+            e.preventDefault();
+            e.dataTransfer.dropEffect = 'move';
+
+            const dropZone = e.currentTarget;
+            
+            if (!dropZone.classList.contains('drag-over')) {
+                dropZone.classList.add('drag-over');
+            }
+
+            // Si on survole un élève spécifique
+            if (e.target.classList.contains('student-item') && e.target !== elementEnCoursDeDeplacement) {
+                const rect = e.target.getBoundingClientRect();
+                const milieu = rect.top + rect.height / 2;
+
+                // Retirer les anciens indicateurs
+                document.querySelectorAll('.insert-before, .insert-after').forEach(el => {
+                    el.classList.remove('insert-before', 'insert-after');
+                });
+
+                // Ajouter le nouvel indicateur
+                if (e.clientY < milieu) {
+                    e.target.classList.add('insert-before');
+                    positionInsertion = { element: e.target, position: 'before' };
+                } else {
+                    e.target.classList.add('insert-after');
+                    positionInsertion = { element: e.target, position: 'after' };
+                }
+            } else if (e.target === dropZone) {
+                positionInsertion = { element: dropZone, position: 'append' };
+            }
+        }
+
+        // Gestion du départ de la zone
+        function handleDragLeave(e) {
+            if (e.currentTarget === e.target) {
+                e.currentTarget.classList.remove('drag-over');
+            }
+        }
+
+        // Gestion du drop
+        function handleDrop(e) {
+            e.preventDefault();
+            e.currentTarget.classList.remove('drag-over');
+
+            document.querySelectorAll('.insert-before, .insert-after').forEach(el => {
+                el.classList.remove('insert-before', 'insert-after');
+            });
+
+            if (!elementEnCoursDeDeplacement) return;
+
+            const destination = e.currentTarget;
+            const ancienParent = elementEnCoursDeDeplacement.parentNode;
+
+            // Retirer l'élément
+            ancienParent.removeChild(elementEnCoursDeDeplacement);
+
+            // Insérer à la position déterminée
+            if (positionInsertion && positionInsertion.element) {
+                if (positionInsertion.position === 'before') {
+                    destination.insertBefore(elementEnCoursDeDeplacement, positionInsertion.element);
+                } else if (positionInsertion.position === 'after') {
+                    if (positionInsertion.element.nextSibling) {
+                        destination.insertBefore(elementEnCoursDeDeplacement, positionInsertion.element.nextSibling);
+                    } else {
+                        destination.appendChild(elementEnCoursDeDeplacement);
+                    }
+                } else {
+                    destination.appendChild(elementEnCoursDeDeplacement);
+                }
+            } else {
+                destination.appendChild(elementEnCoursDeDeplacement);
+            }
+
+            positionInsertion = null;
+
+            // Mettre à jour les stats
+            updateStats(ancienParent.id);
+            updateStats(destination.id);
+        }
+
+        // Clic droit pour retour à la source
+        function handleRightClick(e) {
+            e.preventDefault();
+            const source = document.getElementById('source');
+            const parent = e.target.closest('.student-item').parentNode;
+            
+            if (parent.id !== 'source') {
+                const student = e.target.closest('.student-item');
+                parent.removeChild(student);
+                source.appendChild(student);
+                updateStats(parent.id);
+                updateStats('source');
+            }
+        }
+
+        // Mise à jour des statistiques
+        function updateStats(containerId) {
+            const container = document.getElementById(containerId);
+            const students = container.querySelectorAll('.student-item');
+            const boys = container.querySelectorAll('[data-sexe="M"]').length;
+            const girls = container.querySelectorAll('[data-sexe="F"]').length;
+            const total = students.length;
+
+            const statsEl = document.getElementById(`${containerId}-stats`);
+            if (statsEl) {
+                if (containerId === 'source') {
+                    statsEl.textContent = `Total: ${total} élèves`;
+                } else {
+                    statsEl.textContent = `👦 Garçons: ${boys} | 👧 Filles: ${girls} | Total: ${total}`;
+                }
+            }
+        }
+
+        // Initialiser les zones de drop
+        function initializeDropZones() {
+            const dropZones = document.querySelectorAll('.drop-zone');
+            dropZones.forEach(zone => {
+                zone.addEventListener('dragover', handleDragOver);
+                zone.addEventListener('dragleave', handleDragLeave);
+                zone.addEventListener('drop', handleDrop);
+            });
+        }
+
+        // Initialisation
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeSource();
+            initializeDropZones();
+        });
+    </script>
+</body>
+</html>
