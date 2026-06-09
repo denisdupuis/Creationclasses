@@ -166,44 +166,54 @@ function PrintPDF() {
     TabEleves4.sort(Trier);
 
     var doc = new jsPDF({orientation: "landscape"});
+    var NBEleves;
     
     doc.setDrawColor(1,0,0);
     doc.setLineWidth(0.7);
-    doc.line(5,18,290,18,null);
+    doc.line(5,25,290,25,null);
     
     doc.setFontSize(15);
     doc.setTextColor("#FF0000");
     doc.text(NumClasse1.textContent,10,10);
     doc.setFontSize(10);
     doc.text(OptionClasse1.ariaLabel,10,15);
+    NBEleves = TEleves1.textContent.replace("(","");
+    NBEleves = NBEleves.replace(")","");
+    doc.text(NBEleves+" élèves",10,20);
     doc.setTextColor("#000000");
     for(var j = 0; j<TabEleves1.length; j++) {
-      doc.text(TabEleves1[j].firstChild.textContent,10,25+5*j);
+      doc.text(TabEleves1[j].firstChild.textContent,10,30+5*j);
       }
     doc.setFontSize(15);
     doc.setTextColor("#FF0000");
     doc.text(NumClasse2.textContent,80,10);
     doc.setFontSize(10);
     doc.text(OptionClasse2.ariaLabel,80,15);
+    NBEleves = TEleves2.textContent.replace("(","");
+    NBEleves = NBEleves.replace(")","");
+    doc.text(NBEleves+" élèves",80,20);
     doc.setTextColor("#000000");
     for(var j = 0; j<TabEleves2.length; j++) {
-      doc.text(TabEleves2[j].firstChild.textContent,80,25+5*j);
+      doc.text(TabEleves2[j].firstChild.textContent,80,30+5*j);
       }
     doc.setFontSize(15);    
     doc.setTextColor("#FF0000");
     doc.text(NumClasse3.textContent,150,10);
     doc.setFontSize(10);
     doc.text(OptionClasse3.ariaLabel,150,15);
+    NBEleves = TEleves3.textContent.replace("(","");
+    NBEleves = NBEleves.replace(")","");
+    doc.text(NBEleves+" élèves",150,20);
     doc.setTextColor("#000000");
     for(var j = 0; j<TabEleves3.length; j++) {
-      doc.text(TabEleves3[j].firstChild.textContent,150,25+5*j);
+      doc.text(TabEleves3[j].firstChild.textContent,150,30+5*j);
       }
     if (LaClasse4.style.display=='block') {
       doc.setFontSize(15);
       doc.text(NumClasse4.textContent,150,10);
       doc.setFontSize(10);
       for(var j = 0; j<TabEleves4.length; j++) {
-        doc.text(TabEleves4[j].firstChild.textContent,150,25+5*j);
+        doc.text(TabEleves4[j].firstChild.textContent,150,30+5*j);
         }
     }
     doc.save("Classes.pdf");
