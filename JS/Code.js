@@ -116,6 +116,7 @@ function CreerStructure() {
             TabOptionsLabel3[truc.CLASSE] = truc.LABEL;
             break;              
         }
+        console.log(truc.LABEL);
       })
    }) 
 }
