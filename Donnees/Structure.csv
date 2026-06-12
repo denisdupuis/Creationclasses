@@ -1,13 +1,13 @@
-NIVEAU,CLASSE,OPTIONS
-6,2,D
-6,3,
-6,4,
-5,2,Esp-D
-5,3,Esp-All-V-L
-5,4,Esp-It
-4,2,Esp-D
-4,3,Esp-It-All
-4,4,Esp-It-L-V-H
-3,2,Esp
-3,3,Esp-All-V
-3,4,E-Al-It-L-D-H
+NIVEAU,CLASSE,OPTIONS,LABEL
+6,2,D,Danse
+6,3,,
+6,4,,
+5,2,Esp-D,Espagnol Danse
+5,3,Esp-All-V-L,Espagnol Allemand Voile Latin
+5,4,Esp-It,Espagnol Italien
+4,2,Esp-D,Espagnol Danse
+4,3,Esp-It-All,Espagnil Italien Allemand
+4,4,Esp-It-L-V,Espagnol Italien Latin Voile
+3,2,Esp,Espagnol 
+3,3,Esp-All-V,Espagnol Allemand Voile
+3,4,E-Al-It-L-D,Espagnol Allemand Italien Latin Danse

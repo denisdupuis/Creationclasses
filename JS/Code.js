@@ -113,10 +113,9 @@ function CreerStructure() {
             break;
           case 3:
             TabOptionsClasses3[truc.CLASSE] = truc.OPTIONS;
-            TabOptionsLabel3[truc.CLASSE] = truc.LABEL;
+            TabOptionsLabel3[truc.CLASSE] = truc.LABEL; 
             break;              
         }
-        console.log(truc.LABEL);
       })
    }) 
 }
