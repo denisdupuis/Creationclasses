@@ -52,7 +52,7 @@ var OF = document.getElementById('F');
 
 
 var ChoixClasse = "6";
-var TableauEleves = "Donnees/CM2vers6.json";
+var TableauEleves = [] //"Donnees/CM2vers6.json";
 
 var TabStructure = "Donnees/Structure.json";
 var TabOptionsClasses6 = [];
@@ -569,7 +569,6 @@ function CreerEleves() {
             }
         })
         TabEleves.push(li);
-        //Liste.appendChild(li);
       })
     AfficheEleves();  
     })
@@ -609,7 +608,7 @@ function ChangerChoix(idChoix) {
           OptionClasse1.ariaLabel = TabOptionsLabel6[2];
           OptionClasse2.ariaLabel = TabOptionsLabel6[3];
           OptionClasse3.ariaLabel = TabOptionsLabel6[4];
-          //LaClasse4.style.display = "block";
+          LaClasse4.style.display = "none";
           break;
         case "5": TableauEleves = "Donnees/6vers5.json";
           NumClasse1.textContent = "5ème 2";

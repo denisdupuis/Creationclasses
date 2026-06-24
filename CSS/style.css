@@ -119,6 +119,12 @@ i {
 }
 
 
+#TotalEleves {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+
 .Danger {
   scale: 80%;
   transition: scale 0.3s;
