@@ -14,20 +14,20 @@
   {
     "NIVEAU": 6,
     "CLASSE": 4,
-    "OPTIONS": "",
-    "LABEL": ""
+    "OPTIONS": "Jardin",
+    "LABEL": "Jardin"
   },
   {
     "NIVEAU": 5,
     "CLASSE": 2,
-    "OPTIONS": "Esp-D",
-    "LABEL": "Espagnol Danse"
+    "OPTIONS": "Esp-D-LCE",
+    "LABEL": "Espagnol Danse LCE"
   },
   {
     "NIVEAU": 5,
     "CLASSE": 3,
-    "OPTIONS": "Esp-All-V-L",
-    "LABEL": "Espagnol Allemand Voile Latin"
+    "OPTIONS": "Esp-All-V-L-LCE",
+    "LABEL": "Espagnol Allemand Voile Latin LCE"
   },
   {
     "NIVEAU": 5,
@@ -38,37 +38,37 @@
   {
     "NIVEAU": 4,
     "CLASSE": 2,
-    "OPTIONS": "Esp-D",
-    "LABEL": "Espagnol Danse"
+    "OPTIONS": "Esp-All-It-D-LCE",
+    "LABEL": "Espagnol Allemand Italien Danse LCE"
   },
   {
     "NIVEAU": 4,
     "CLASSE": 3,
-    "OPTIONS": "Esp-It-All",
-    "LABEL": "Espagnil Italien Allemand"
+    "OPTIONS": "Esp-V-LCE-L",
+    "LABEL": "Espagnol Voile LCE Latin"
   },
   {
     "NIVEAU": 4,
     "CLASSE": 4,
-    "OPTIONS": "Esp-It-L-V",
-    "LABEL": "Espagnol Italien Latin Voile"
-  },
-  {
-    "NIVEAU": 3,
-    "CLASSE": 2,
     "OPTIONS": "Esp",
     "LABEL": "Espagnol"
   },
   {
     "NIVEAU": 3,
+    "CLASSE": 2,
+    "OPTIONS": "D-Esp-It-LCE-L",
+    "LABEL": "Danse Espagnol Italien LCE Latin"
+  },
+  {
+    "NIVEAU": 3,
     "CLASSE": 3,
-    "OPTIONS": "Esp-All-V",
-    "LABEL": "Espagnol Allemand Voile"
+    "OPTIONS": "Esp",
+    "LABEL": "Espagnol"
   },
   {
     "NIVEAU": 3,
     "CLASSE": 4,
-    "OPTIONS": "E-Al-It-L-D",
-    "LABEL": "Espagnol Allemand Italien Latin Danse"
+    "OPTIONS": "Esp-Entr",
+    "LABEL": "Espagnol Entreprise"
   }
 ]

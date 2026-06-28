@@ -473,7 +473,7 @@ function CreerEleves() {
                 Img6.src = 'Images/Allemand.jpg';
                 li.ariaLabel = li.ariaLabel+" ALL";
               }
-              if (truc.LV2 == 'FLS') Img6.src = 'Images/FLS.png';
+              if ((truc.LV2 == 'FLS')||(truc.OPTION == 'FLS')) Img6.src = 'Images/FLS.png';
               Img6.style.float = 'right';
               li.appendChild(Img6);
               if ((truc.OPTION == 'DANSE')||(truc.OPTION2=='DANSE')) {
