@@ -409,8 +409,11 @@ function CreerEleves() {
         if (ChoixClasse == 6)
           {
           li.textContent = `${truc.NOM} ${truc.PRENOM}`;
-          var ImgEcole = document.createElement("img");
-          switch(truc.ECOLE) {
+          var ImgEcole = document.createElement("i");
+          ImgEcole.className = "NomEcole";
+          ImgEcole.textContent = truc.ECOLE;  
+
+          /*switch(truc.ECOLE) {
             case 'P':
               ImgEcole.src='Images/P.png';
               break;
@@ -423,8 +426,9 @@ function CreerEleves() {
             case 'C':
               ImgEcole.src='Images/C.png';
               break;
-            } 
-          if (truc.OPTION == 'DANSE') {
+            }*/ 
+
+          if (truc.OPTION == 'D') {
             var Image = document.createElement('img');
             Image.src = 'Images/Danse.png';
             Image.style.float = 'right';
