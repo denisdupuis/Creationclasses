@@ -28,6 +28,21 @@ i {
   color: #c9eaf0;
 }
 
+.ElementNiveau {
+  border-radius: 50%;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  float: right;
+  margin-left: 5px;
+  color: white;
+  font-size: 0.8em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 #Menu {
   border-style: none;

@@ -34,6 +34,7 @@ var NumClasse3 = document.getElementById('NumClasse3');
 var NumClasse4 = document.getElementById('NumClasse4');
 
 var NB = 0;
+
 var Bouton6 = document.getElementById("B6");
 var Bouton5 = document.getElementById("B5");
 var Bouton4 = document.getElementById("B4");
@@ -401,7 +402,8 @@ function CreerEleves() {
             li.style.border='thick double blue';
             li.style.backgroundColor='rgb(9, 9, 83)';
             li.ariaLabel = li.ariaLabel+" G";
-        } else { li.style.border='thick double rgb(227, 133, 240)'; 
+        } else { 
+                 li.style.border='thick double rgb(227, 133, 240)'; 
                  li.style.backgroundColor='rgb(68, 44, 79)';
                  li.ariaLabel = li.ariaLabel+" F";
                }
@@ -409,24 +411,56 @@ function CreerEleves() {
         if (ChoixClasse == 6)
           {
           li.textContent = `${truc.NOM} ${truc.PRENOM}`;
+          console.log(li.textContent.length);
           var ImgEcole = document.createElement("i");
           ImgEcole.className = "NomEcole";
-          ImgEcole.textContent = truc.ECOLE;  
-
-          /*switch(truc.ECOLE) {
-            case 'P':
-              ImgEcole.src='Images/P.png';
+          ImgEcole.textContent = truc.ECOLE;
+          
+          var MElementNiveau = document.createElement('span');
+          MElementNiveau.classList.add('ElementNiveau');
+          
+          var FRElementNiveau = document.createElement('span');
+          FRElementNiveau.classList.add('ElementNiveau');
+          
+          switch(truc.FR) {
+            case 'F':
+              FRElementNiveau.style.backgroundColor = 'red';
+              li.appendChild(FRElementNiveau);
               break;
-            case 'L':
-              ImgEcole.src='Images/L.png';
+            case 'B':
+              FRElementNiveau.style.backgroundColor = 'green';
+              li.appendChild(FRElementNiveau);
+              break;
+            case 'TB':
+              FRElementNiveau.style.backgroundColor = 'green';
+              FRElementNiveau.textContent = '+';
+              li.appendChild(FRElementNiveau);
               break;
             case 'M':
-              ImgEcole.src='Images/M.png'  ;
+              FRElementNiveau.style.backgroundColor = 'yellow';
+              li.appendChild(FRElementNiveau);
               break;
-            case 'C':
-              ImgEcole.src='Images/C.png';
+          }
+
+          switch(truc.M) {
+            case 'F':
+              MElementNiveau.style.backgroundColor = 'red';
+              li.appendChild(MElementNiveau);
               break;
-            }*/ 
+            case 'B':
+              MElementNiveau.style.backgroundColor = 'green';
+              li.appendChild(MElementNiveau);
+              break;
+            case 'TB':
+              MElementNiveau.style.backgroundColor = 'green';
+              MElementNiveau.textContent = '+';
+              li.appendChild(MElementNiveau);
+              break;
+            case 'M':
+              MElementNiveau.style.backgroundColor = 'yellow';
+              li.appendChild(MElementNiveau);
+              break;
+          }
 
           if (truc.OPTION == 'D') {
             var Image = document.createElement('img');
