@@ -5,9 +5,9 @@
     "SEXE": "F",
     "ECOLE": "Langevin",
     "OPTION": "",
-    "INFOS": "OUI",
-    "FR": "B",
-    "M": "TB"
+    "INFOS": "",
+    "FR": "",
+    "M": ""
   },
   {
     "NOM": "ANQUETIN",
@@ -15,9 +15,9 @@
     "SEXE": "M",
     "ECOLE": "Paul Bert",
     "OPTION": "",
-    "INFOS": "NON",
-    "FR": "TB",
-    "M": "TB"
+    "INFOS": "",
+    "FR": "",
+    "M": ""
   },
   {
     "NOM": "ARNAUD",
@@ -25,9 +25,9 @@
     "SEXE": "M",
     "ECOLE": "Prevert",
     "OPTION": "",
-    "INFOS": "OUI",
-    "FR": "M",
-    "M": "F"
+    "INFOS": "",
+    "FR": "",
+    "M": ""
   },
   {
     "NOM": "BAER",
@@ -36,8 +36,8 @@
     "ECOLE": "Langevin",
     "OPTION": "",
     "INFOS": "",
-    "FR": "F",
-    "M": "M"
+    "FR": "",
+    "M": ""
   },
   {
     "NOM": "BEAUFILS",
@@ -46,8 +46,8 @@
     "ECOLE": "Langevin",
     "OPTION": "ULIS",
     "INFOS": "",
-    "FR": "F",
-    "M": "M"
+    "FR": "",
+    "M": ""
   },
   {
     "NOM": "BERREHAL",
@@ -55,9 +55,9 @@
     "SEXE": "M",
     "ECOLE": "Langevin",
     "OPTION": "",
-    "INFOS": "LALALA",
-    "FR": "TB",
-    "M": "M"
+    "INFOS": "",
+    "FR": "",
+    "M": ""
   },
   {
     "NOM": "BIRGUL",
@@ -66,8 +66,8 @@
     "ECOLE": "Langevin",
     "OPTION": "",
     "INFOS": "",
-    "FR": "TB",
-    "M": "B"
+    "FR": "",
+    "M": ""
   },
   {
     "NOM": "BOUARGUIOUN",
@@ -76,8 +76,8 @@
     "ECOLE": "Paul Bert",
     "OPTION": "",
     "INFOS": "",
-    "FR": "B",
-    "M": "B"
+    "FR": "",
+    "M": ""
   },
   {
     "NOM": "BOUDARD GIRARD",
@@ -86,8 +86,8 @@
     "ECOLE": "Langevin",
     "OPTION": "",
     "INFOS": "",
-    "FR": "B",
-    "M": "B"
+    "FR": "",
+    "M": ""
   },
   {
     "NOM": "CAKIR",
@@ -96,8 +96,8 @@
     "ECOLE": "",
     "OPTION": "ULIS",
     "INFOS": "",
-    "FR": "M",
-    "M": "B"
+    "FR": "",
+    "M": ""
   },
   {
     "NOM": "CAKIR",
@@ -106,18 +106,18 @@
     "ECOLE": "Langevin",
     "OPTION": "",
     "INFOS": "",
-    "FR": "M",
-    "M": "B"
+    "FR": "",
+    "M": ""
   },
   {
     "NOM": "CHERNOV",
     "PRENOM": "Nikita",
-    "SEXE": "F",
+    "SEXE": "M",
     "ECOLE": "Paul Bert",
     "OPTION": "",
     "INFOS": "",
-    "FR": "M",
-    "M": "F"
+    "FR": "",
+    "M": ""
   },
   {
     "NOM": "DADAEV",
@@ -126,8 +126,8 @@
     "ECOLE": "Langevin",
     "OPTION": "D",
     "INFOS": "",
-    "FR": "F",
-    "M": "F"
+    "FR": "",
+    "M": ""
   },
   {
     "NOM": "DAO",
@@ -136,8 +136,8 @@
     "ECOLE": "Langevin",
     "OPTION": "D",
     "INFOS": "",
-    "FR": "F",
-    "M": "F"
+    "FR": "",
+    "M": ""
   },
   {
     "NOM": "DEHAYS",
@@ -694,6 +694,26 @@
     "PRENOM": "Kendrick",
     "SEXE": "M",
     "ECOLE": "Langevin",
+    "OPTION": "",
+    "INFOS": "",
+    "FR": "",
+    "M": ""
+  },
+  {
+    "NOM": "ANTONIO LUKOKI",
+    "PRENOM": "Andre",
+    "SEXE": "M",
+    "ECOLE": "Descelliers",
+    "OPTION": "",
+    "INFOS": "",
+    "FR": "",
+    "M": ""
+  },
+  {
+    "NOM": "BULALA PANU",
+    "PRENOM": "Lucas",
+    "SEXE": "M",
+    "ECOLE": "Descelliers",
     "OPTION": "",
     "INFOS": "",
     "FR": "",

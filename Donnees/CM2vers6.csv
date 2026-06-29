@@ -1,18 +1,18 @@
 NOM,PRENOM,SEXE,ECOLE,OPTION,INFOS,FR,M
-ANFRAY,Aerys,F,Langevin,,OUI,B,TB
-ANQUETIN,Tim,M,Paul Bert,,NON,TB,TB
-ARNAUD,Keylian,M,Prevert,,OUI,M,F
-BAER,Ruben,M,Langevin,,,F,M
-BEAUFILS,Enora,F,Langevin,ULIS,,F,M
-BERREHAL,Aksel,M,Langevin,,LALALA,TB,M
-BIRGUL,Berat,M,Langevin,,,TB,B
-BOUARGUIOUN,Mehdy,M,Paul Bert,,,B,B
-BOUDARD GIRARD,Lucy,F,Langevin,,,B,B
-CAKIR,Ebubekir,M,,ULIS,,M,B
-CAKIR,Muhammet Emin,M,Langevin,,,M,B
-CHERNOV,Nikita,F,Paul Bert,,,M,F
-DADAEV,Alexandrine,F,Langevin,D,,F,F
-DAO,Laure,F,Langevin,D,,F,F
+ANFRAY,Aerys,F,Langevin,,,,
+ANQUETIN,Tim,M,Paul Bert,,,,
+ARNAUD,Keylian,M,Prevert,,,,
+BAER,Ruben,M,Langevin,,,,
+BEAUFILS,Enora,F,Langevin,ULIS,,,
+BERREHAL,Aksel,M,Langevin,,,,
+BIRGUL,Berat,M,Langevin,,,,
+BOUARGUIOUN,Mehdy,M,Paul Bert,,,,
+BOUDARD GIRARD,Lucy,F,Langevin,,,,
+CAKIR,Ebubekir,M,,ULIS,,,
+CAKIR,Muhammet Emin,M,Langevin,,,,
+CHERNOV,Nikita,M,Paul Bert,,,,
+DADAEV,Alexandrine,F,Langevin,D,,,
+DAO,Laure,F,Langevin,D,,,
 DEHAYS,Swan,M,Prevert,,,,
 DEKINDT,Lylouh,F,Langevin,,,,
 DELGADO,Chloe,F,Paul Bert,D,,,
@@ -69,3 +69,5 @@ YELMANI,Nelia,F,Langevin,,,,
 YOUNES,Yanis,M,Paul Bert,,,,
 COURTAIS,Nael,M,Paul Bert,,,,
 RODIN,Kendrick,M,Langevin,,,,
+ANTONIO LUKOKI,Andre,M,Descelliers,,,,
+BULALA PANU,Lucas,M,Descelliers,,,,
