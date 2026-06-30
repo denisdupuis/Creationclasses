@@ -6,7 +6,7 @@
     "ECOLE": "Langevin",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "F",
     "M": ""
   },
   {
@@ -15,8 +15,8 @@
     "SEXE": "M",
     "ECOLE": "Paul Bert",
     "OPTION": "",
-    "INFOS": "",
-    "FR": "",
+    "INFOS": "MDPH",
+    "FR": "TB",
     "M": ""
   },
   {
@@ -36,7 +36,7 @@
     "ECOLE": "Langevin",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "TB",
     "M": ""
   },
   {
@@ -56,7 +56,7 @@
     "ECOLE": "Langevin",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "B",
     "M": ""
   },
   {
@@ -66,7 +66,7 @@
     "ECOLE": "Langevin",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "M",
     "M": ""
   },
   {
@@ -76,8 +76,8 @@
     "ECOLE": "Paul Bert",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
-    "M": ""
+    "FR": "TB",
+    "M": "TB"
   },
   {
     "NOM": "BOUDARD GIRARD",
@@ -86,7 +86,7 @@
     "ECOLE": "Langevin",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "M",
     "M": ""
   },
   {
@@ -105,8 +105,8 @@
     "SEXE": "M",
     "ECOLE": "Langevin",
     "OPTION": "",
-    "INFOS": "",
-    "FR": "",
+    "INFOS": "A tester�?",
+    "FR": "F",
     "M": ""
   },
   {
@@ -116,8 +116,8 @@
     "ECOLE": "Paul Bert",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
-    "M": ""
+    "FR": "TB",
+    "M": "TB"
   },
   {
     "NOM": "DADAEV",
@@ -125,8 +125,8 @@
     "SEXE": "F",
     "ECOLE": "Langevin",
     "OPTION": "D",
-    "INFOS": "",
-    "FR": "",
+    "INFOS": "Dys ++",
+    "FR": "F",
     "M": ""
   },
   {
@@ -136,7 +136,7 @@
     "ECOLE": "Langevin",
     "OPTION": "D",
     "INFOS": "",
-    "FR": "",
+    "FR": "TB",
     "M": ""
   },
   {
@@ -146,7 +146,7 @@
     "ECOLE": "Prevert",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "B",
     "M": ""
   },
   {
@@ -155,8 +155,8 @@
     "SEXE": "F",
     "ECOLE": "Langevin",
     "OPTION": "",
-    "INFOS": "",
-    "FR": "",
+    "INFOS": "PAI Epilepsie",
+    "FR": "F",
     "M": ""
   },
   {
@@ -166,7 +166,7 @@
     "ECOLE": "Paul Bert",
     "OPTION": "D",
     "INFOS": "",
-    "FR": "",
+    "FR": "B",
     "M": ""
   },
   {
@@ -176,7 +176,7 @@
     "ECOLE": "Paul Bert",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "M",
     "M": ""
   },
   {
@@ -186,7 +186,7 @@
     "ECOLE": "Paul Bert",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "M",
     "M": ""
   },
   {
@@ -196,7 +196,7 @@
     "ECOLE": "Paul Bert",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "F",
     "M": ""
   },
   {
@@ -206,7 +206,7 @@
     "ECOLE": "Langevin",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "F",
     "M": ""
   },
   {
@@ -216,7 +216,7 @@
     "ECOLE": "Langevin",
     "OPTION": "D",
     "INFOS": "",
-    "FR": "",
+    "FR": "M",
     "M": ""
   },
   {
@@ -226,7 +226,7 @@
     "ECOLE": "Langevin",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "M",
     "M": ""
   },
   {
@@ -236,7 +236,7 @@
     "ECOLE": "Paul Bert",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "B",
     "M": ""
   },
   {
@@ -256,7 +256,7 @@
     "ECOLE": "Langevin",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "M",
     "M": ""
   },
   {
@@ -266,7 +266,7 @@
     "ECOLE": "Langevin",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "F",
     "M": ""
   },
   {
@@ -275,18 +275,18 @@
     "SEXE": "F",
     "ECOLE": "Langevin",
     "OPTION": "",
-    "INFOS": "",
-    "FR": "",
+    "INFOS": "A tester",
+    "FR": "F",
     "M": ""
   },
   {
     "NOM": "GULER",
     "PRENOM": "Ensar",
-    "SEXE": "",
+    "SEXE": "M",
     "ECOLE": "Langevin",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "M",
     "M": ""
   },
   {
@@ -296,7 +296,7 @@
     "ECOLE": "Paul Bert",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "B",
     "M": ""
   },
   {
@@ -306,37 +306,37 @@
     "ECOLE": "Paul Bert",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "B",
     "M": ""
   },
   {
     "NOM": "HURTEL",
-    "PRENOM": "Jkeylian",
+    "PRENOM": "Keylian",
     "SEXE": "M",
     "ECOLE": "Langevin",
     "OPTION": "",
-    "INFOS": "",
-    "FR": "",
+    "INFOS": "Dys TDAH",
+    "FR": "F",
     "M": ""
   },
   {
     "NOM": "INCI",
     "PRENOM": "Cemal",
-    "SEXE": "",
+    "SEXE": "M",
     "ECOLE": "Langevin",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "F",
     "M": ""
   },
   {
     "NOM": "KALKAN",
     "PRENOM": "Berat",
-    "SEXE": "",
+    "SEXE": "M",
     "ECOLE": "Paul Bert",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "F",
     "M": ""
   },
   {
@@ -346,17 +346,17 @@
     "ECOLE": "Offranville",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "TB",
     "M": ""
   },
   {
     "NOM": "LAURENT",
     "PRENOM": "You-Me",
-    "SEXE": "",
+    "SEXE": "F",
     "ECOLE": "Langevin",
     "OPTION": "",
-    "INFOS": "",
-    "FR": "",
+    "INFOS": "A tester SEGPA",
+    "FR": "F",
     "M": ""
   },
   {
@@ -366,7 +366,7 @@
     "ECOLE": "Langevin",
     "OPTION": "D",
     "INFOS": "",
-    "FR": "",
+    "FR": "M",
     "M": ""
   },
   {
@@ -375,8 +375,8 @@
     "SEXE": "F",
     "ECOLE": "Langevin",
     "OPTION": "",
-    "INFOS": "",
-    "FR": "",
+    "INFOS": "TDAH",
+    "FR": "M",
     "M": ""
   },
   {
@@ -385,8 +385,8 @@
     "SEXE": "F",
     "ECOLE": "Paul Bert",
     "OPTION": "D",
-    "INFOS": "",
-    "FR": "",
+    "INFOS": "PAP",
+    "FR": "F",
     "M": ""
   },
   {
@@ -395,8 +395,8 @@
     "SEXE": "M",
     "ECOLE": "Paul Bert",
     "OPTION": "",
-    "INFOS": "",
-    "FR": "",
+    "INFOS": "Notif ULIS",
+    "FR": "F",
     "M": ""
   },
   {
@@ -405,8 +405,8 @@
     "SEXE": "F",
     "ECOLE": "Langevin",
     "OPTION": "",
-    "INFOS": "",
-    "FR": "",
+    "INFOS": "Dys ++",
+    "FR": "F",
     "M": ""
   },
   {
@@ -416,7 +416,7 @@
     "ECOLE": "Langevin",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "TB",
     "M": ""
   },
   {
@@ -425,8 +425,8 @@
     "SEXE": "F",
     "ECOLE": "Paul Bert",
     "OPTION": "",
-    "INFOS": "",
-    "FR": "",
+    "INFOS": "AESH M",
+    "FR": "F",
     "M": ""
   },
   {
@@ -435,8 +435,8 @@
     "SEXE": "F",
     "ECOLE": "Paul Bert",
     "OPTION": "",
-    "INFOS": "",
-    "FR": "",
+    "INFOS": "Test SEGPA au dessus",
+    "FR": "F",
     "M": ""
   },
   {
@@ -456,16 +456,16 @@
     "ECOLE": "Langevin",
     "OPTION": "D",
     "INFOS": "",
-    "FR": "",
+    "FR": "TB",
     "M": ""
   },
   {
     "NOM": "MARTINS",
     "PRENOM": "Thani",
-    "SEXE": "F",
+    "SEXE": "M",
     "ECOLE": "Descelliers",
     "OPTION": "",
-    "INFOS": "",
+    "INFOS": "?????",
     "FR": "",
     "M": ""
   },
@@ -485,8 +485,8 @@
     "SEXE": "M",
     "ECOLE": "Paul Bert",
     "OPTION": "",
-    "INFOS": "",
-    "FR": "",
+    "INFOS": "PAP",
+    "FR": "TB",
     "M": ""
   },
   {
@@ -496,7 +496,7 @@
     "ECOLE": "Paul Bert",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "F",
     "M": ""
   },
   {
@@ -506,7 +506,7 @@
     "ECOLE": "Paul Bert",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "F",
     "M": ""
   },
   {
@@ -516,7 +516,7 @@
     "ECOLE": "Langevin",
     "OPTION": "D",
     "INFOS": "",
-    "FR": "",
+    "FR": "TB",
     "M": ""
   },
   {
@@ -526,7 +526,7 @@
     "ECOLE": "Paul Bert",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "F",
     "M": ""
   },
   {
@@ -536,7 +536,7 @@
     "ECOLE": "Langevin",
     "OPTION": "D",
     "INFOS": "",
-    "FR": "",
+    "FR": "B",
     "M": ""
   },
   {
@@ -545,8 +545,8 @@
     "SEXE": "",
     "ECOLE": "Langevin",
     "OPTION": "",
-    "INFOS": "",
-    "FR": "",
+    "INFOS": "Notif ULIS AESH",
+    "FR": "F",
     "M": ""
   },
   {
@@ -556,7 +556,7 @@
     "ECOLE": "Langevin",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "M",
     "M": ""
   },
   {
@@ -566,7 +566,7 @@
     "ECOLE": "Paul Bert",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "M",
     "M": ""
   },
   {
@@ -576,7 +576,7 @@
     "ECOLE": "Paul Bert",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "B",
     "M": ""
   },
   {
@@ -586,7 +586,7 @@
     "ECOLE": "Langevin",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "M",
     "M": ""
   },
   {
@@ -595,8 +595,8 @@
     "SEXE": "M",
     "ECOLE": "Paul Bert",
     "OPTION": "",
-    "INFOS": "",
-    "FR": "",
+    "INFOS": "AESH I",
+    "FR": "F",
     "M": ""
   },
   {
@@ -606,7 +606,7 @@
     "ECOLE": "Langevin",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "M",
     "M": ""
   },
   {
@@ -616,7 +616,7 @@
     "ECOLE": "Langevin",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "M",
     "M": ""
   },
   {
@@ -626,7 +626,7 @@
     "ECOLE": "Paul Bert",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "M",
     "M": ""
   },
   {
@@ -636,7 +636,7 @@
     "ECOLE": "Langevin",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "M",
     "M": ""
   },
   {
@@ -646,7 +646,7 @@
     "ECOLE": "Paul Bert",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "B",
     "M": ""
   },
   {
@@ -656,7 +656,7 @@
     "ECOLE": "Paul Bert",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "M",
     "M": ""
   },
   {
@@ -665,8 +665,8 @@
     "SEXE": "F",
     "ECOLE": "Langevin",
     "OPTION": "",
-    "INFOS": "",
-    "FR": "",
+    "INFOS": "AVC en CE2",
+    "FR": "F",
     "M": ""
   },
   {
@@ -676,7 +676,7 @@
     "ECOLE": "Paul Bert",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "F",
     "M": ""
   },
   {
@@ -696,7 +696,7 @@
     "ECOLE": "Langevin",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "F",
     "M": ""
   },
   {
@@ -706,7 +706,7 @@
     "ECOLE": "Descelliers",
     "OPTION": "",
     "INFOS": "",
-    "FR": "",
+    "FR": "F",
     "M": ""
   },
   {
@@ -715,7 +715,7 @@
     "SEXE": "M",
     "ECOLE": "Descelliers",
     "OPTION": "",
-    "INFOS": "",
+    "INFOS": "?????",
     "FR": "",
     "M": ""
   }
