@@ -91,7 +91,7 @@ i {
   transform: scale(0.9);
 }
 
-.Niveau, .LV2, .MenuOptions {
+.Niveau, .LV2, .MenuOptions, .MenuExport {
   display: flex;
   font-size: 1.5rem;
   font: bold;
