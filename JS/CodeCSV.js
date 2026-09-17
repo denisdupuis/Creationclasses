@@ -269,7 +269,6 @@ function CreerCSV() {
     URL.revokeObjectURL(Url);
 }
 
-
 function TrierOptions(Valeur) {
   var Element = document.getElementById(Valeur);
   TabTri[Valeur] = 1-TabTri[Valeur];
