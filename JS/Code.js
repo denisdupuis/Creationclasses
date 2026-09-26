@@ -236,25 +236,36 @@ function CreerCSV() {
     TabEleves3.sort(Trier);
     TabEleves4.sort(Trier);
 
-    var CSV = "Classe;Nom;Options\n";
-
-    function AjouterLignes(NomClasse, Options, Tableau) {
-      Tableau.forEach(function(Eleve) {
-        var Nom = Eleve.firstChild.textContent;
-        // On échappe les guillemets et on encadre les champs pour éviter les soucis avec ; ou virgules dans un nom
-        var Champs = [NomClasse, Nom, Options].map(function(Valeur) {
-          Valeur = (Valeur == null) ? "" : String(Valeur);
-          return '"' + Valeur.replace(/"/g, '""') + '"';
-        });
-        CSV += Champs.join(";") + "\n";
-      });
+    // On échappe les guillemets et on encadre chaque champ pour éviter les soucis avec ; ou virgules
+    function Champ(Valeur) {
+      Valeur = (Valeur == null) ? "" : String(Valeur);
+      return '"' + Valeur.replace(/"/g, '""') + '"';
     }
 
-    AjouterLignes(NumClasse1.textContent, OptionClasse1.ariaLabel, TabEleves1);
-    AjouterLignes(NumClasse2.textContent, OptionClasse2.ariaLabel, TabEleves2);
-    AjouterLignes(NumClasse3.textContent, OptionClasse3.ariaLabel, TabEleves3);
+    var Colonnes = [
+      { NomClasse: NumClasse1.textContent, Options: OptionClasse1.ariaLabel, Tableau: TabEleves1 },
+      { NomClasse: NumClasse2.textContent, Options: OptionClasse2.ariaLabel, Tableau: TabEleves2 },
+      { NomClasse: NumClasse3.textContent, Options: OptionClasse3.ariaLabel, Tableau: TabEleves3 }
+    ];
     if (LaClasse4.style.display == 'block') {
-      AjouterLignes(NumClasse4.textContent, OptionClasse4.ariaLabel, TabEleves4);
+      Colonnes.push({ NomClasse: NumClasse4.textContent, Options: OptionClasse4.ariaLabel, Tableau: TabEleves4 });
+    }
+
+    // Ligne 1 : nom de la classe ; Ligne 2 : ses options
+    var LigneNoms = Colonnes.map(function(Col) { return Champ(Col.NomClasse); }).join(";");
+    var LigneOptions = Colonnes.map(function(Col) { return Champ(Col.Options); }).join(";");
+    var CSV = LigneNoms + "\n" + LigneOptions + "\n";
+
+    // Nombre de lignes = la classe la plus remplie
+    var NBLignes = Math.max.apply(null, Colonnes.map(function(Col) { return Col.Tableau.length; }));
+
+    for (var i = 0; i < NBLignes; i++) {
+      var LigneEleves = Colonnes.map(function(Col) {
+        var Eleve = Col.Tableau[i];
+        var Nom = Eleve ? Eleve.firstChild.textContent : "";
+        return Champ(Nom);
+      });
+      CSV += LigneEleves.join(";") + "\n";
     }
 
     // Le "\uFEFF" (BOM) permet à Excel d'afficher correctement les accents
