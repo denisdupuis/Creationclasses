@@ -125,11 +125,11 @@ i {
   justify-content: space-around;
 }
 
-#PDF, #ESP, #ITA, #ALL, #Danse, #Voile, #LCE, #Latin, #HIST, #G, #F {
+#PDF, #CSV, #ESP, #ITA, #ALL, #Danse, #Voile, #LCE, #Latin, #HIST, #G, #F {
   cursor: pointer;
 }
 
-#PDF:hover, #ESP:hover, #ITA:hover, #ALL:hover, #Danse:hover, #Voile:hover, #LCE:hover, #Latin:hover, #HIST:hover, #G:hover, #F:hover {
+#PDF:hover, #CSV:hover, #ESP:hover, #ITA:hover, #ALL:hover, #Danse:hover, #Voile:hover, #LCE:hover, #Latin:hover, #HIST:hover, #G:hover, #F:hover {
   border: solid #f30606;
 }
 
