@@ -35,6 +35,8 @@ var NumClasse4 = document.getElementById('NumClasse4');
 
 var NB = 0;
 
+var NumElevesDispo = document.getElementById('NombreElevesDispo');
+
 var Bouton6 = document.getElementById("B6");
 var Bouton5 = document.getElementById("B5");
 var Bouton4 = document.getElementById("B4");
@@ -72,6 +74,9 @@ var TabEleves1 = [];
 var TabEleves2 = [];
 var TabEleves3 = [];
 var TabEleves4 = [];
+
+// Sélecteur des blocs qui peuvent recevoir un élève
+const SelecteurBlocs = '#BlocClasse1, #BlocClasse2, #BlocClasse3, #BlocClasse4, #BlocListeEleves';
 
 const Menu = document.getElementById("MenuBas");
 const OuvrirMenu = document.getElementById("OuvrirMenu");
@@ -282,6 +287,7 @@ function CreerCSV() {
 
 
 function TrierOptions(Valeur) {
+  var Nombre = 0;
   var Element = document.getElementById(Valeur);
   TabTri[Valeur] = 1-TabTri[Valeur];
   if (TabTri[Valeur] == 0) {
@@ -294,6 +300,7 @@ function TrierOptions(Valeur) {
       } else TabEleves[i].style.display = 'block';
     }
   }
+  NumElevesDispo.textContent = Nombre+" élèves";
 }
 
 function Comptage(Classe) {
@@ -359,48 +366,49 @@ function DragLeave(evt) {
 }
 
 
+// Retire l'élève de tous les tableaux de suivi
+function EnleverDesTableaux(Eleve) {
+  TabEleves  = TabEleves.filter(E => E.id != Eleve.id);
+  TabEleves1 = TabEleves1.filter(E => E.id != Eleve.id);
+  TabEleves2 = TabEleves2.filter(E => E.id != Eleve.id);
+  TabEleves3 = TabEleves3.filter(E => E.id != Eleve.id);
+  TabEleves4 = TabEleves4.filter(E => E.id != Eleve.id);
+}
+
+
+// Dépose un élève dans un bloc (classe ou liste) : utilisé par la souris ET le tactile
+function DeposerEleve(Eleve, Bloc) {
+  var Tab;
+  switch (Bloc.id) {
+    case 'BlocClasse1': TabEleves1.push(Eleve); Tab = TabEleves1; break;
+    case 'BlocClasse2': TabEleves2.push(Eleve); Tab = TabEleves2; break;
+    case 'BlocClasse3': TabEleves3.push(Eleve); Tab = TabEleves3; break;
+    case 'BlocClasse4': TabEleves4.push(Eleve); Tab = TabEleves4; break;
+    case 'BlocListeEleves':
+      TabEleves.push(Eleve);
+      AfficheEleves();
+      Compter();
+      return;
+    default: return;
+  }
+  Bloc.innerHTML = '';
+  Tab.sort(Trier);
+  for (var i = 0; i < Tab.length; i++) Bloc.appendChild(Tab[i]);
+  Compter();
+}
+
+
 function LacheEleve(evt) {
     evt.preventDefault();
     var Data = evt.dataTransfer.getData("EleveDéplacé");
     if (Data) {   // Si l'élément est bien une DIV (et non une image ou du texte) ... 
-    var Eleve = document.getElementById(Data);  
-    console.log(evt.target.id);
-    switch(evt.target.id) {
-      case 'BlocClasse1':
-        evt.target.innerHTML = '';
-        TabEleves1.push(Eleve);
-        TabEleves1.sort(Trier);
-        for(var i=0; i<TabEleves1.length; i++) {
-          evt.target.appendChild(TabEleves1[i]);
-        }
-        break;
-      case 'BlocClasse2':
-        evt.target.innerHTML = '';
-        TabEleves2.push(Eleve);
-        TabEleves2.sort(Trier);
-        for(var i=0; i<TabEleves2.length; i++) {
-          evt.target.appendChild(TabEleves2[i]);
-        }
-        break;
-      case 'BlocClasse3':
-        evt.target.innerHTML = '';
-        TabEleves3.push(Eleve);
-        TabEleves3.sort(Trier);
-        for(var i=0; i<TabEleves3.length; i++) {
-          evt.target.appendChild(TabEleves3[i]);
-        }
-        break;  
-      case 'BlocClasse4':
-        evt.target.innerHTML = '';
-        TabEleves4.push(Eleve);
-        TabEleves4.sort(Trier);
-        for(var i=0; i<TabEleves4.length; i++) {
-          evt.target.appendChild(TabEleves4[i]);
-        }
-        break;    
+      var Eleve = document.getElementById(Data);
+      // On remonte au bloc parent, même si on lâche sur un élève déjà placé
+      var Bloc = evt.target.closest(SelecteurBlocs);
+      if (Eleve && Bloc) {
+        DeposerEleve(Eleve, Bloc);
       }
-    evt.stopPropagation();  
-    Compter();
+      evt.stopPropagation();
     }
 }
 
@@ -408,6 +416,78 @@ function LacheEleve(evt) {
 function DragSortie(evt) {
     var Data = evt.dataTransfer.getData("EleveDéplacé");
     var Eleve = document.getElementById(Data);
+}
+
+
+// ---------------------------------------------------------------
+// DRAG & DROP TACTILE (tablette) : appui long (300 ms) puis glisser
+// ---------------------------------------------------------------
+var ToucheEnCours = false;   // vrai pendant un déplacement tactile
+
+function ActiverToucher(li) {
+  var Minuteur = null, Fantome = null, EnDrag = false;
+  var DecalX = 0, DecalY = 0;
+
+  function Annuler() {
+    clearTimeout(Minuteur);
+    if (Fantome) { Fantome.remove(); Fantome = null; }
+    li.style.opacity = '';
+    EnDrag = false;
+    setTimeout(function() { ToucheEnCours = false; }, 400);
+  }
+
+  li.addEventListener("touchstart", function(evt) {
+    if (evt.touches.length != 1) return;
+    if (evt.target.classList.contains('Danger')) return;   // laisse le clic sur l'icône danger
+    var t = evt.touches[0];
+    var Rect = li.getBoundingClientRect();
+    DecalX = t.clientX - Rect.left;
+    DecalY = t.clientY - Rect.top;
+
+    Minuteur = setTimeout(function() {
+      EnDrag = true;
+      ToucheEnCours = true;
+      Fantome = li.cloneNode(true);
+      Fantome.removeAttribute('id');
+      Fantome.style.position = 'fixed';
+      Fantome.style.pointerEvents = 'none';
+      Fantome.style.zIndex = 10000;
+      Fantome.style.opacity = '0.85';
+      Fantome.style.width = Rect.width + 'px';
+      Fantome.style.left = (t.clientX - DecalX) + 'px';
+      Fantome.style.top  = (t.clientY - DecalY) + 'px';
+      document.body.appendChild(Fantome);
+      li.style.opacity = '0.3';
+      if (navigator.vibrate) navigator.vibrate(30);
+    }, 300);
+  }, {passive: true});
+
+  li.addEventListener("touchmove", function(evt) {
+    var t = evt.touches[0];
+    if (!EnDrag) {            // doigt qui bouge avant l'appui long = simple défilement
+      clearTimeout(Minuteur);
+      return;
+    }
+    evt.preventDefault();     // bloque le défilement pendant le déplacement
+    Fantome.style.left = (t.clientX - DecalX) + 'px';
+    Fantome.style.top  = (t.clientY - DecalY) + 'px';
+  }, {passive: false});
+
+  li.addEventListener("touchend", function(evt) {
+    clearTimeout(Minuteur);
+    if (!EnDrag) return;
+    evt.preventDefault();
+    var t = evt.changedTouches[0];
+    var Cible = document.elementFromPoint(t.clientX, t.clientY);  // le fantôme ignore les clics
+    var Bloc = Cible ? Cible.closest(SelecteurBlocs) : null;
+    if (Bloc) {
+      EnleverDesTableaux(li);
+      DeposerEleve(li, Bloc);
+    }
+    Annuler();
+  });
+
+  li.addEventListener("touchcancel", Annuler);
 }
 
 
@@ -475,8 +555,10 @@ function CreerEleves() {
           var ImgEcole = document.createElement("i");
           ImgEcole.className = "NomEcole";
           ImgEcole.textContent = truc.ECOLE;
+
+          // PRISE EN COMPTE DU NIVEAU DES ELEVES ???
           
-          var MElementNiveau = document.createElement('span');
+          /*var MElementNiveau = document.createElement('span');
           MElementNiveau.classList.add('ElementNiveau');
           
           var FRElementNiveau = document.createElement('span');
@@ -502,7 +584,7 @@ function CreerEleves() {
               break;
           }
 
-          /*switch(truc.M) {
+          switch(truc.M) {
             case 'F':
               MElementNiveau.style.backgroundColor = 'red';
               li.appendChild(MElementNiveau);
@@ -653,19 +735,23 @@ function CreerEleves() {
         })
          
        li.addEventListener("contextmenu", function(evt) {
-            const Source = evt.target.parentNode;
             evt.preventDefault();
-            if (Source.id != 'BlocListeEleves') {
+            // Sur tablette, l'appui long peut déclencher ce menu : on l'ignore pendant un déplacement tactile
+            if (ToucheEnCours) return;
+            const Source = li.parentNode;
+            if (Source && Source.id != 'BlocListeEleves') {
               Source.removeChild(li);
-              if (Source.id == 'BlocClasse1') { TabEleves1 = TabEleves1.filter(E => E.id != evt.target.id) }
-              if (Source.id == 'BlocClasse2') { TabEleves2 = TabEleves2.filter(E => E.id != evt.target.id) }
-              if (Source.id == 'BlocClasse3') { TabEleves3 = TabEleves3.filter(E => E.id != evt.target.id) }
-              if (Source.id == 'BlocClasse4') { TabEleves4 = TabEleves4.filter(E => E.id != evt.target.id) }
+              if (Source.id == 'BlocClasse1') { TabEleves1 = TabEleves1.filter(E => E.id != li.id) }
+              if (Source.id == 'BlocClasse2') { TabEleves2 = TabEleves2.filter(E => E.id != li.id) }
+              if (Source.id == 'BlocClasse3') { TabEleves3 = TabEleves3.filter(E => E.id != li.id) }
+              if (Source.id == 'BlocClasse4') { TabEleves4 = TabEleves4.filter(E => E.id != li.id) }
               TabEleves.push(li);
               AfficheEleves();
               Compter();
             }
         })
+
+        ActiverToucher(li);   // active le déplacement tactile
         TabEleves.push(li);
       })
     AfficheEleves();  
@@ -759,6 +845,9 @@ function Init() {
   Classe3.addEventListener("drop", LacheEleve);
   Classe4.addEventListener("dragover", DragDessus);
   Classe4.addEventListener("drop", LacheEleve);
+  // La liste d'élèves accepte aussi les dépôts (retour d'un élève à la liste)
+  Liste.addEventListener("dragover", DragDessus);
+  Liste.addEventListener("drop", LacheEleve);
   LaClasse4.style.display = 'none';
   OuvrirMenu.onclick = OpenMenu;
   FermerMenu.onclick = CloseMenu;

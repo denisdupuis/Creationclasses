@@ -18,6 +18,10 @@ body {
   width: 2200px;
 }
 
+#NombreElevesDispo {
+  text-align: center;
+}
+
 
 i {
   color: #f3f5f6;
@@ -247,4 +251,10 @@ i {
   height: 98vh;
   resize:horizontal;
   overflow-y: scroll;
+}
+
+.Etiquette {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
 }
